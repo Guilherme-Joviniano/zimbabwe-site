@@ -1,0 +1,184 @@
+@import url('https://rsms.me/inter/inter.css');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+i{
+    font-size: 2rem;
+    color: #FFF;
+}
+@keyframes rotate3d {
+    0%{
+        transform: rotate3d(1, 0, 0, 360deg);
+    }
+    100%{
+        transform: rotate3d(1, 0, 0, 0);
+    }
+}
+.animation{
+    animation: rotate3d 1s linear;
+    transform: scale3d(1);
+    /* transition: .5s all ease; */
+}
+
+*::-webkit-scrollbar {
+    width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+    border-radius: 8px;
+}
+
+*::-webkit-scrollbar-thumb {
+    height: 56px;
+    border-radius: 8px;
+    border: 4px solid transparent;
+    background-clip: content-box;
+    background-color: #888;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+html{
+    position: relative;
+    width: 1440px;
+    height: auto;    
+    background: transparent;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    background-color: #000;
+}
+
+.about, .politica{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    width: 100vw;
+    height: 100vh;
+    left: 0px;
+    top: 0px;    
+}
+.intro{
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90.77deg, rgba(0, 0, 0, 0.9) 0.51%, rgba(0, 0, 0, 0.595312) 33.92%, rgba(0, 0, 0, 0.365625) 59.62%, rgba(0, 0, 0, 0) 100%), url("../intro-sobre.png");
+    /* Inside auto layout */
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 0px;
+}
+
+#intro2{
+    background: linear-gradient(180.77deg, rgba(0, 0, 0, 0.9) 0.51%, rgba(0, 0, 0, 0.595312) 33.92%, rgba(0, 0, 0, 0.465625) 59.62%, rgba(0, 0, 0, 0) 100%), url("../zimbabwe-history.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.title-intro{
+    position: relative;
+    width: 833px;
+    height: 612px;
+    left: 290px;
+    top: 30%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 128px;
+    line-height: 155px;
+    color: #FFFFFF;
+}
+.title-intro:nth-child(2){
+    left: 50px;
+}
+.content{
+    width: 50%;
+    height: 100%;
+    background: #C65046;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 0px;
+}
+#content2{
+    background: #99583B;       
+}
+#content2 p{
+    margin-left: 100px;
+}
+
+.content p{
+    position: relative;
+    top: 200px;
+    text-align: justify;
+    left: 10%;
+    width: 528px;
+    height: 200px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;    
+    line-height: 29px;
+    color: #FFFFFF;
+}
+.content p:nth-child(1):after{
+    display: block;
+    content: '';
+    width: 100vw;
+    height: 5px;
+    margin: 10px;
+    margin-left: 0px;
+    margin-top: 100px;
+    background-color: #FFFFFF;
+}
+.content p:nth-child(2){
+    top: 400px;
+    left: 100px;
+}
+.arrow-down, .arrow-up{
+    position: absolute;
+    top: 870px;
+    left: 65%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    transition: .3s all ease-in-out;
+    cursor: pointer;
+    z-index: 99;
+}
+.arrow-up{
+    position: relative;
+    top: 100px;
+    left: 65%;
+    width: 50px;
+}
+.arrow-down:hover{
+    background-color: green;
+    border: #00000000;
+}
+.arrow-up:hover{
+    background-color: rgb(232, 123, 7);
+    border: #00000000;
+}
+.politica{
+    background-color: green;
+}
+.audio-wrapper{
+    margin: 20px;
+    position: fixed;
+    z-index: 99;
+    width: 300px;
+    height: 100px;
+    padding: 5px;
+    border-radius: 16px;
+}
