@@ -47,15 +47,16 @@ html{
     width: 1440px;
     height: auto;    
     background: transparent;
-    overflow: hidden;
+    overflow-x: hidden;
     scroll-behavior: smooth;
     background-color: #000;
 }
 
-.about, .politica{
+section{
     display: flex;
     flex-direction: row;
     align-items: flex-start;
+    flex-wrap: wrap;
     padding: 0px;
     width: 100vw;
     height: 100vh;
@@ -68,7 +69,8 @@ html{
     background: linear-gradient(90.77deg, rgba(0, 0, 0, 0.9) 0.51%, rgba(0, 0, 0, 0.595312) 33.92%, rgba(0, 0, 0, 0.365625) 59.62%, rgba(0, 0, 0, 0) 100%), url("../intro-sobre.png");
     /* Inside auto layout */
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
+    background-attachment: fixed;
     flex: none;
     order: 0;
     flex-grow: 0;
@@ -80,6 +82,26 @@ html{
     background-repeat: no-repeat;
     background-size: cover;
 }
+#intro3 {
+    background: linear-gradient(180.77deg, rgba(0, 0, 0, 0.9) 0.51%, rgba(0, 0, 0, 0.595312) 33.92%, rgba(0, 0, 0, 0.465625) 59.62%, rgba(0, 0, 0, 0) 100%), url("https://images.unsplash.com/photo-1598124146789-ff5e7b688a14?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80");
+    background-attachment: fixed;
+    background-size: contain;
+}
+#intro4{
+    background: linear-gradient(180.77deg, rgba(0, 0, 0, 0.9) 0.51%, rgba(0, 0, 0, 0.595312) 33.92%, rgba(0, 0, 0, 0.465625) 59.62%, rgba(0, 0, 0, 0) 100%), url("https://images.unsplash.com/photo-1633116936549-1eed8ec43a9d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+    background-size: cover;
+}
+#intro5{
+    background: linear-gradient(180.77deg, rgba(0, 0, 0, 0.9) 0.51%, rgba(0, 0, 0, 0.595312) 33.92%, rgba(0, 0, 0, 0.465625) 59.62%, rgba(0, 0, 0, 0) 100%), url("https://images.unsplash.com/photo-1646776930319-b16b17781725?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80");
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#intro6{
+    background: linear-gradient(180.77deg, rgba(0, 0, 0, 0.9) 0.51%, rgba(0, 0, 0, 0.595312) 33.92%, rgba(0, 0, 0, 0.465625) 59.62%, rgba(0, 0, 0, 0) 100%), url("https://images.unsplash.com/photo-1515658323406-25d61c141a6e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=709&q=80");
+    background-size: cover;
+}
+
 .title-intro{
     position: relative;
     width: 833px;
@@ -111,6 +133,37 @@ html{
 }
 #content2 p{
     margin-left: 100px;
+}
+#content3 {
+    background: #273F3A ;
+}
+#content4{
+    background-color: #181D1C;
+}
+#content5{
+    background-color: #4765A1;
+}
+#content5 p{
+    width: 700px;
+    position: absolute;
+    text-align: center;
+    top: 70%;
+    left: 75%;
+    font-size: 16px;
+
+}
+#content5 p::after, #content6 p::after{
+    display: none;
+}
+#content6 p {
+    left: 20%;
+}
+#content4 p{
+    font-size: 16px;
+    left: 25%;
+}
+#content6 {
+    background-color: #793B3F;
 }
 
 .content p{
@@ -156,6 +209,9 @@ html{
     cursor: pointer;
     z-index: 99;
 }
+.arrow-down:nth-child(2){
+    top: 800px;
+}
 .arrow-up{
     position: relative;
     top: 100px;
@@ -181,4 +237,79 @@ html{
     height: 100px;
     padding: 5px;
     border-radius: 16px;
+}
+.card-wrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+    top: 10%;
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
+}
+.card{
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter';
+    font-size: 1rem;
+    width: 20%;
+    height: 20%;
+    border-radius: 50%;
+    background-color: #4a786e;
+    color: #FFF;
+    cursor: pointer;
+    transition: .5s all ease-in-out;
+}
+.card:hover{
+    background-color: #0f1816;
+}
+
+
+
+.text{
+    display: none;
+    position: absolute;
+    top: 1950px;
+    left: 75%;
+    margin: 0 auto;
+    width: 720px;
+    height: 750px;
+    background-color: red;
+}
+.show{
+    display: block;
+}
+.hide{
+    display: none;
+    transition: .5s all ease-in-out;
+}
+.icon-wrapper{
+    position: relative;
+    top: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+}
+.icon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    height: 20%;
+    border-radius: 50%;
+    gap: 5px;
+    background-color: #1e4ba3;
+}
+.icon img{
+    width: 50%;
 }

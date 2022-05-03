@@ -1,9 +1,10 @@
 const audio = document.querySelector('.audio-wrapper')
-const btnArrowDown = document.querySelector('.arrow-down')
-const btnArrowUp = document.querySelector('.arrow-up')
-
-// window.addEventListener('scroll', changeAudioOnScroll(), true)
-
+const btnArrowDown1 = document.querySelectorAll('.arrow-down')[0]
+const btnArrowUp1 = document.querySelectorAll('.arrow-up')[0]
+const text = []
+const localText = document.querySelector('.text-history')
+const localCards = document.querySelector('.card-wrapper')
+console.log(localText);
 addEventListener('scroll', function(){
     console.log(window.scrollY);
     if(window.scrollY <= 900){
@@ -15,9 +16,15 @@ addEventListener('scroll', function(){
 }, true)
 
 
-btnArrowUp.addEventListener('click', function(){
-    document.querySelector('.about').scrollIntoView();
-}, false)
-btnArrowDown.addEventListener('click', function(){
-    document.querySelector('.politica').scrollIntoView();
-}, false)
+const cards = document.querySelectorAll('.card')
+
+for(var i = 0; i < cards.length; ++i){
+    cards[i].addEventListener("click", function(e){
+        e.preventDefault
+        const el = e.target
+        localText.innerHTML = text[e.id]
+        console.log('Adicionando o Texto' + '' + el.id)
+        localCards.classList.toggle('hide')
+    })
+}
+
