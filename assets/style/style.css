@@ -272,15 +272,16 @@ section{
 
 
 
-.text{
-    display: none;
+.text-history{
     position: absolute;
     top: 1950px;
     left: 75%;
     margin: 0 auto;
     width: 720px;
     height: 750px;
-    background-color: red;
+    color: #FFF;
+    font-weight: bolder;
+    font-size: 2rem;
 }
 .show{
     display: block;
@@ -313,3 +314,4 @@ section{
 .icon img{
     width: 50%;
 }
+
